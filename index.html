@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>third</title>
+    <style>
+        /* Reset CSS: Please avoid making changes here unless you know what you're doing :) */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            line-height: 1;
+            font-family: Arial, sans-serif;
+            background-color: #040218;
+            display: grid;
+            place-content: center;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        #game-container {
+            position: relative;
+            max-width: 100vw;
+            height: 100vh;
+        }
+
+        .game-over {
+            display: grid;
+            place-content: center;
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 80%;
+            height: 60%;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            color: crimson;
+            font-size: 2rem;
+            font-weight: bolder;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .game-over-visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="game-container">
+        <div class="game-over">
+            <p>Game Over
+            <p>
+        </div>
+    </div>
+
+    <script type="module" src="./src/script.js"></script>
+    <script src="./phaser.js"></script>
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
