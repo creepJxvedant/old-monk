@@ -220,7 +220,7 @@ export class Start extends Phaser.Scene {
               this.enemy = null;
             }
             // Spawn a new enemy after 5 seconds
-            this.time.delayedCall(5000, this.spawnEnemy, [], this);
+            this.time.delayedCall(2000, this.spawnEnemy, [], this);
           });
         }
       } else if (this.enemy) {
@@ -230,7 +230,7 @@ export class Start extends Phaser.Scene {
 
     const isOnGround = this.player.body.blocked.down;
     if (this.cursors.up.isDown && isOnGround) {
-      this.player.setVelocityY(-500);
+      this.player.setVelocityY(-400);
     }
 
     // **MOVE PLAYER & BACKGROUND**
